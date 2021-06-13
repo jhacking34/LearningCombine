@@ -19,12 +19,12 @@ class CancellingMulitplePipelinesViewModel: ObservableObject{
     private var validationCancellables: Set<AnyCancellable> = []
     
     init(){
-        $firstName
-            .map { $0.isEmpty ? "❌" : "✅"}
-            .sink { [unowned self] value in
+        $firstName // Publisher  -- Water Tower
+            .map { $0.isEmpty ? "❌" : "✅"} // Operator Processing data -  In the pipeline
+            .sink { [unowned self] value in // Cancellable subscriber to do stuff with data followed up with the store in subscriber  -  House/kitchen getting water
                 self.firstNameValidation = value
             }
-            .store(in: &validationCancellables)
+            .store(in: &validationCancellables) // store in subscriber
         
         $lastName
             .map { $0.isEmpty ? "❌" : "✅"}
