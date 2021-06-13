@@ -23,6 +23,9 @@
 		F621EDA62675076700B08A8C /* FirstPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621EDA52675076700B08A8C /* FirstPipeline.swift */; };
 		F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */; };
 		F6C833252676439400579A58 /* CancellingMultiplePipelinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */; };
+		F6C833272676B35F00579A58 /* URLDataTaskPublisher_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */; };
+		F6C833292676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */; };
+		F6C8332C2676B49600579A58 /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332B2676B49600579A58 /* CatFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		F621EDA52675076700B08A8C /* FirstPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPipeline.swift; sourceTree = "<group>"; };
 		F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellingMultiplePipelines.swift; sourceTree = "<group>"; };
 		F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellingMultiplePipelinesViewModel.swift; sourceTree = "<group>"; };
+		F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataTaskPublisher_Intro.swift; sourceTree = "<group>"; };
+		F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataTaskPublisher_IntroViewModel.swift; sourceTree = "<group>"; };
+		F6C8332B2676B49600579A58 /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 		F621ED80267396D000B08A8C /* LearningCombine */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8332A2676B47D00579A58 /* Model */,
 				F621ED982674ED9600B08A8C /* ViewModel */,
 				F621ED8F2673977A00B08A8C /* View */,
 				F621ED81267396D000B08A8C /* LearningCombineApp.swift */,
@@ -120,6 +127,7 @@
 				F621ED9F2674F4D800B08A8C /* ValidationWithOnChange.swift */,
 				F621EDA52675076700B08A8C /* FirstPipeline.swift */,
 				F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */,
+				F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -131,8 +139,17 @@
 				F621EDA12674F59800B08A8C /* OnChangeViewModel.swift */,
 				F621EDA32675059900B08A8C /* FirstPipelineViewModel.swift */,
 				F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */,
+				F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6C8332A2676B47D00579A58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8332B2676B49600579A58 /* CatFact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +231,14 @@
 				F621ED9726739BF200B08A8C /* Constraints.swift in Sources */,
 				F621EDA02674F4D800B08A8C /* ValidationWithOnChange.swift in Sources */,
 				F6C833252676439400579A58 /* CancellingMultiplePipelinesViewModel.swift in Sources */,
+				F6C833292676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift in Sources */,
 				F621EDA62675076700B08A8C /* FirstPipeline.swift in Sources */,
+				F6C8332C2676B49600579A58 /* CatFact.swift in Sources */,
 				F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */,
 				F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */,
 				F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */,
 				F621ED94267399E100B08A8C /* DescView.swift in Sources */,
+				F6C833272676B35F00579A58 /* URLDataTaskPublisher_Intro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
