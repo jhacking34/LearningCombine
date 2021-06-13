@@ -14,6 +14,15 @@
 		F621ED92267397B100B08A8C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED91267397B100B08A8C /* HeaderView.swift */; };
 		F621ED94267399E100B08A8C /* DescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED93267399E100B08A8C /* DescView.swift */; };
 		F621ED9726739BF200B08A8C /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED9626739BF200B08A8C /* Constraints.swift */; };
+		F621ED9A2674EDB700B08A8C /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED992674EDB700B08A8C /* IntroViewModel.swift */; };
+		F621ED9C2674EE5C00B08A8C /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED9B2674EE5C00B08A8C /* IntroView.swift */; };
+		F621ED9E2674F1FD00B08A8C /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED9D2674F1FD00B08A8C /* ReadWrite.swift */; };
+		F621EDA02674F4D800B08A8C /* ValidationWithOnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED9F2674F4D800B08A8C /* ValidationWithOnChange.swift */; };
+		F621EDA22674F59800B08A8C /* OnChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621EDA12674F59800B08A8C /* OnChangeViewModel.swift */; };
+		F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621EDA32675059900B08A8C /* FirstPipelineViewModel.swift */; };
+		F621EDA62675076700B08A8C /* FirstPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621EDA52675076700B08A8C /* FirstPipeline.swift */; };
+		F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */; };
+		F6C833252676439400579A58 /* CancellingMultiplePipelinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		F621ED91267397B100B08A8C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F621ED93267399E100B08A8C /* DescView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescView.swift; sourceTree = "<group>"; };
 		F621ED9626739BF200B08A8C /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		F621ED992674EDB700B08A8C /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		F621ED9B2674EE5C00B08A8C /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		F621ED9D2674F1FD00B08A8C /* ReadWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWrite.swift; sourceTree = "<group>"; };
+		F621ED9F2674F4D800B08A8C /* ValidationWithOnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationWithOnChange.swift; sourceTree = "<group>"; };
+		F621EDA12674F59800B08A8C /* OnChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnChangeViewModel.swift; sourceTree = "<group>"; };
+		F621EDA32675059900B08A8C /* FirstPipelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPipelineViewModel.swift; sourceTree = "<group>"; };
+		F621EDA52675076700B08A8C /* FirstPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPipeline.swift; sourceTree = "<group>"; };
+		F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellingMultiplePipelines.swift; sourceTree = "<group>"; };
+		F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellingMultiplePipelinesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,7 @@
 		F621ED80267396D000B08A8C /* LearningCombine */ = {
 			isa = PBXGroup;
 			children = (
+				F621ED982674ED9600B08A8C /* ViewModel */,
 				F621ED8F2673977A00B08A8C /* View */,
 				F621ED81267396D000B08A8C /* LearningCombineApp.swift */,
 				F621ED85267396D300B08A8C /* Assets.xcassets */,
@@ -95,9 +114,25 @@
 		F621ED9526739BCA00B08A8C /* Subjects */ = {
 			isa = PBXGroup;
 			children = (
+				F621ED9B2674EE5C00B08A8C /* IntroView.swift */,
 				F621ED9626739BF200B08A8C /* Constraints.swift */,
+				F621ED9D2674F1FD00B08A8C /* ReadWrite.swift */,
+				F621ED9F2674F4D800B08A8C /* ValidationWithOnChange.swift */,
+				F621EDA52675076700B08A8C /* FirstPipeline.swift */,
+				F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */,
 			);
 			path = Subjects;
+			sourceTree = "<group>";
+		};
+		F621ED982674ED9600B08A8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F621ED992674EDB700B08A8C /* IntroViewModel.swift */,
+				F621EDA12674F59800B08A8C /* OnChangeViewModel.swift */,
+				F621EDA32675059900B08A8C /* FirstPipelineViewModel.swift */,
+				F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +205,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F621ED9C2674EE5C00B08A8C /* IntroView.swift in Sources */,
+				F621EDA22674F59800B08A8C /* OnChangeViewModel.swift in Sources */,
+				F621ED9E2674F1FD00B08A8C /* ReadWrite.swift in Sources */,
 				F621ED84267396D000B08A8C /* ContentView.swift in Sources */,
+				F621ED9A2674EDB700B08A8C /* IntroViewModel.swift in Sources */,
 				F621ED92267397B100B08A8C /* HeaderView.swift in Sources */,
 				F621ED9726739BF200B08A8C /* Constraints.swift in Sources */,
+				F621EDA02674F4D800B08A8C /* ValidationWithOnChange.swift in Sources */,
+				F6C833252676439400579A58 /* CancellingMultiplePipelinesViewModel.swift in Sources */,
+				F621EDA62675076700B08A8C /* FirstPipeline.swift in Sources */,
+				F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */,
+				F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */,
 				F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */,
 				F621ED94267399E100B08A8C /* DescView.swift in Sources */,
 			);
