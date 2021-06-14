@@ -26,6 +26,9 @@
 		F6C833272676B35F00579A58 /* URLDataTaskPublisher_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */; };
 		F6C833292676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */; };
 		F6C8332C2676B49600579A58 /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332B2676B49600579A58 /* CatFact.swift */; };
+		F6C8332E267791D500579A58 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332D267791D500579A58 /* Employee.swift */; };
+		F6C833302677932800579A58 /* EmployeeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332F2677932800579A58 /* EmployeeProfile.swift */; };
+		F6C833322677940800579A58 /* EmployeeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataTaskPublisher_Intro.swift; sourceTree = "<group>"; };
 		F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataTaskPublisher_IntroViewModel.swift; sourceTree = "<group>"; };
 		F6C8332B2676B49600579A58 /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
+		F6C8332D267791D500579A58 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		F6C8332F2677932800579A58 /* EmployeeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfile.swift; sourceTree = "<group>"; };
+		F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 				F621EDA52675076700B08A8C /* FirstPipeline.swift */,
 				F6C833222676426800579A58 /* CancellingMultiplePipelines.swift */,
 				F6C833262676B35F00579A58 /* URLDataTaskPublisher_Intro.swift */,
+				F6C8332F2677932800579A58 /* EmployeeProfile.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 				F621EDA32675059900B08A8C /* FirstPipelineViewModel.swift */,
 				F6C833242676439400579A58 /* CancellingMultiplePipelinesViewModel.swift */,
 				F6C833282676B41900579A58 /* URLDataTaskPublisher_IntroViewModel.swift */,
+				F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C8332B2676B49600579A58 /* CatFact.swift */,
+				F6C8332D267791D500579A58 /* Employee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F621ED9C2674EE5C00B08A8C /* IntroView.swift in Sources */,
+				F6C8332E267791D500579A58 /* Employee.swift in Sources */,
 				F621EDA22674F59800B08A8C /* OnChangeViewModel.swift in Sources */,
 				F621ED9E2674F1FD00B08A8C /* ReadWrite.swift in Sources */,
 				F621ED84267396D000B08A8C /* ContentView.swift in Sources */,
@@ -235,6 +245,8 @@
 				F621EDA62675076700B08A8C /* FirstPipeline.swift in Sources */,
 				F6C8332C2676B49600579A58 /* CatFact.swift in Sources */,
 				F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */,
+				F6C833322677940800579A58 /* EmployeeProfileViewModel.swift in Sources */,
+				F6C833302677932800579A58 /* EmployeeProfile.swift in Sources */,
 				F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */,
 				F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */,
 				F621ED94267399E100B08A8C /* DescView.swift in Sources */,
