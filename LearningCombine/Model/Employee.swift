@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Employee: Codable, Identifiable{
-    let id : UUID
-    let empID : Int
+struct Employee: Decodable{
+    let id : String
+//    let empID : Int
     let fname : String
     let lname : String
     let email : String
-    let imageURL : String?
+    let imageURL : String
 }
 
 struct EmployeeResponse: Decodable{
-    let response : [Employee]
+    let resource : [Employee]
 }

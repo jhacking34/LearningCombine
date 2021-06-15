@@ -13,7 +13,10 @@ struct EmployeeProfile: View {
     var body: some View {
         VStack{
             HeaderView(title: "Employee Profile", subTitle: "First Pull Via API", desc: "I am pulling info from BHI API to see how this will work to prepare for the other apps I am making.")
-            
+        
+            Button("press"){
+                print("This is the VM \(vm.dataToView[0].resource[0].fname)")
+            }
             Spacer()
             
         }
@@ -21,6 +24,10 @@ struct EmployeeProfile: View {
         .background(
             Image("Caineville")
                 .clipped())
+        .onAppear {
+            vm.fetch()
+            
+        }
     }
 }
 

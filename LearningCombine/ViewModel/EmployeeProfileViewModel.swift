@@ -6,7 +6,25 @@
 //
 
 import Foundation
+import Combine
 
 class EmployeeProfileViewModel : ObservableObject{
+    @Published var dataToView: [EmployeeResponse] = []
+    var cancellables: Set<AnyCancellable> = []
     
+    func fetch(){
+        let url = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data}
+            .decode(type: EmployeeResponse.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                print(completion)
+            }, receiveValue: { [unowned self] employee in
+                dataToView = [employee]
+                print("this is what i go \(employee)")
+            })
+            .store(in: &cancellables)
+    }
 }
+
