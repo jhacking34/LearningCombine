@@ -10,10 +10,12 @@ import Combine
 
 class EmployeeProfileViewModel : ObservableObject{
     @Published var employees: [Employee] = []
+    @Published var errorForAlert: ErrorForAlert?
+    
     var cancellables: Set<AnyCancellable> = []
     
     func fetch(){
-        let url = URL(string: "https://api.bhico.com/api/v2/swifti/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
+        let url = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
         URLSession.shared.dataTaskPublisher(for: url)
             .map { $0.data}
         // map has Data task publisher error handling
@@ -21,22 +23,8 @@ class EmployeeProfileViewModel : ObservableObject{
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
-                    
-                    //Decode Error
-//                    switch error {
-//                    case .invalidResponse:
-//                        print("bad")
-//
-//                    case .invalidURL:
-//                        print("bad")
-//
-//                    case .invalidData:
-//                        print("bad")
-//
-//                    case .unableToComplete:
-//                        print("bad")
-//                    }
-                    print(error)
+                // Decode Error Handling
+                    self.errorForAlert = ErrorForAlert(message: "Details: \(error.localizedDescription)")
                 }
                 
             }, receiveValue: { [unowned self] employee in

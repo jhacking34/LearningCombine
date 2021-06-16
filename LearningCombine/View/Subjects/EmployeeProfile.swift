@@ -28,6 +28,9 @@ struct EmployeeProfile: View {
         .onAppear {
             vm.fetch()
         }
+        .alert(item: $vm.errorForAlert) { alert in
+            Alert(title: Text(alert.title), message: Text(alert.message))
+        }
     }
 }
 

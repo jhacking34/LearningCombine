@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B3D0C7267ABC8100149EBB /* ErrorForAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */; };
 		F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED81267396D000B08A8C /* LearningCombineApp.swift */; };
 		F621ED84267396D000B08A8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621ED83267396D000B08A8C /* ContentView.swift */; };
 		F621ED86267396D300B08A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F621ED85267396D300B08A8C /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorForAlert.swift; sourceTree = "<group>"; };
 		F621ED7E267396D000B08A8C /* LearningCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F621ED81267396D000B08A8C /* LearningCombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCombineApp.swift; sourceTree = "<group>"; };
 		F621ED83267396D000B08A8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				F6C8332B2676B49600579A58 /* CatFact.swift */,
 				F6C8332D267791D500579A58 /* Employee.swift */,
+				37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				F621EDA22674F59800B08A8C /* OnChangeViewModel.swift in Sources */,
 				F621ED9E2674F1FD00B08A8C /* ReadWrite.swift in Sources */,
 				F621ED84267396D000B08A8C /* ContentView.swift in Sources */,
+				37B3D0C7267ABC8100149EBB /* ErrorForAlert.swift in Sources */,
 				F621ED9A2674EDB700B08A8C /* IntroViewModel.swift in Sources */,
 				F621ED92267397B100B08A8C /* HeaderView.swift in Sources */,
 				F621ED9726739BF200B08A8C /* Constraints.swift in Sources */,
