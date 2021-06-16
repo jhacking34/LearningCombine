@@ -14,9 +14,10 @@ struct EmployeeProfile: View {
         VStack{
             HeaderView(title: "Employee Profile", subTitle: "First Pull Via API", desc: "I am pulling info from BHI API to see how this will work to prepare for the other apps I am making.")
         
-            Button("press"){
-                print("This is the VM \(vm.dataToView[0].resource[0].fname)")
+            List(vm.employees, id: \.id) { employee in
+                Text("Employee name: \(employee.fname) \(employee.lname) and email addy is: \(employee.email) ")
             }
+            .font(.body)
             Spacer()
             
         }
@@ -26,7 +27,6 @@ struct EmployeeProfile: View {
                 .clipped())
         .onAppear {
             vm.fetch()
-            
         }
     }
 }

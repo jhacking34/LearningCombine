@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class EmployeeProfileViewModel : ObservableObject{
-    @Published var dataToView: [EmployeeResponse] = []
+    @Published var employees: [Employee] = []
     var cancellables: Set<AnyCancellable> = []
     
     func fetch(){
@@ -21,8 +21,7 @@ class EmployeeProfileViewModel : ObservableObject{
             .sink(receiveCompletion: { completion in
                 print(completion)
             }, receiveValue: { [unowned self] employee in
-                dataToView = [employee]
-                print("this is what i go \(employee)")
+                employees = employee.resource
             })
             .store(in: &cancellables)
     }
