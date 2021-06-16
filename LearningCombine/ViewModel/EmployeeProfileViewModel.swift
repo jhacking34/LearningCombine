@@ -19,11 +19,23 @@ class EmployeeProfileViewModel : ObservableObject{
             .decode(type: EmployeeResponse.self, decoder: JSONDecoder())
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
-                if case .failure(let error) = completion{
-                    print(error.localizedDescription)
-                }else{
-                    print(completion)
+                if case .failure(let error) = completion {
+//                    switch error {
+//                    case .invalidResponse:
+//                        print("bad")
+//
+//                    case .invalidURL:
+//                        print("bad")
+//
+//                    case .invalidData:
+//                        print("bad")
+//
+//                    case .unableToComplete:
+//                        print("bad")
+//                    }
+                    print(error)
                 }
+                
             }, receiveValue: { [unowned self] employee in
                 employees = employee.resource
             })
