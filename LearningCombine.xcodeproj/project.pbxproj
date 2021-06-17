@@ -30,6 +30,7 @@
 		F6C8332E267791D500579A58 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332D267791D500579A58 /* Employee.swift */; };
 		F6C833302677932800579A58 /* EmployeeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8332F2677932800579A58 /* EmployeeProfile.swift */; };
 		F6C833322677940800579A58 /* EmployeeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */; };
+		F6CA029C267AD5470045556B /* UrlResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA029B267AD5470045556B /* UrlResponseErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		F6C8332D267791D500579A58 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		F6C8332F2677932800579A58 /* EmployeeProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfile.swift; sourceTree = "<group>"; };
 		F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileViewModel.swift; sourceTree = "<group>"; };
+		F6CA029B267AD5470045556B /* UrlResponseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlResponseErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				F6C8332B2676B49600579A58 /* CatFact.swift */,
 				F6C8332D267791D500579A58 /* Employee.swift */,
 				37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */,
+				F6CA029B267AD5470045556B /* UrlResponseErrors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				F6C8332C2676B49600579A58 /* CatFact.swift in Sources */,
 				F6C833232676426800579A58 /* CancellingMultiplePipelines.swift in Sources */,
 				F6C833322677940800579A58 /* EmployeeProfileViewModel.swift in Sources */,
+				F6CA029C267AD5470045556B /* UrlResponseErrors.swift in Sources */,
 				F6C833302677932800579A58 /* EmployeeProfile.swift in Sources */,
 				F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */,
 				F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */,
