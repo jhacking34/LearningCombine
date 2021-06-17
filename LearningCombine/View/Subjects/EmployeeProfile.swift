@@ -26,7 +26,7 @@ struct EmployeeProfile: View {
             Image("Caineville")
                 .clipped())
         .onAppear {
-            vm.fetch()
+            vm.loadData()
         }
         .alert(item: $vm.errorForAlert) { alert in
             Alert(title: Text(alert.title), message: Text(alert.message))
