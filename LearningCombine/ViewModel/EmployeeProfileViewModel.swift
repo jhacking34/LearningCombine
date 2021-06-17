@@ -29,24 +29,28 @@ class EmployeeProfileViewModel : ObservableObject{
                 }
                 return data
             }
-        // map has Data task publisher error handling
-            .decode(type: EmployeeResponse.self, decoder: JSONDecoder())
-            .mapError{ error -> UrlResponseErrors in
+            .decode(type: EmployeeResponse.self, decoder: JSONDecoder()) //look at the Employee Model to get breakdown of type
+            .mapError{ error -> UrlResponseErrors in // This mapError is looking to return a UrlResponseError type.
+                //This right here is check the error and trys to unwrap the optional as a UrlResponseErrors.  If the error is not that type it means its a different and runs the else
                 if let responseError = error as? UrlResponseErrors {
+                    print(error)
                     return responseError
                 } else {
+                    print(error)
+                    // We return the UrlResponseErrors.decodeError because that is what this closure is looking for and we do that cuz this else statement got ran because it
+                    // was not of type UrlResponseErrors AKA URL Error and so we assume its a different error dealing with the decode. so we return the generic decode error we built in that model.
                     return UrlResponseErrors.decodeError
                 }
             }
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
-                // Decode Error Handling
+                // This inserts the error into the Error alert message and pulls that message from our UrlResponseErrors Model
                     self.errorForAlert = ErrorForAlert(message: "Details: \(error.rawValue)")
                 }
                 
             }, receiveValue: { [unowned self] employee in
-                employees = employee.resource
+                employees = employee.resource //look at the employee model to see why we used employee.resource
             })
             .store(in: &cancellables)
     }
