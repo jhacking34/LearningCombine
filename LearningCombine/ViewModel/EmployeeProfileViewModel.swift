@@ -51,10 +51,8 @@ class EmployeeProfileViewModel : ObservableObject{
             .mapError{ error -> UrlResponseErrors in // This mapError is looking to return a UrlResponseError type.
                             //This right here is check the error and trys to unwrap the optional as a UrlResponseErrors.  If the error is not that type it means its a different and runs the else
                             if let responseError = error as? UrlResponseErrors {
-                                print(error)
                                 return responseError
                             } else {
-                                print(error)
                                 // We return the UrlResponseErrors.decodeError because that is what this closure is looking for and we do that cuz this else statement got ran because it
                                 // was not of type UrlResponseErrors AKA URL Error and so we assume its a different error dealing with the decode. so we return the generic decode error we built in that model.
                                 return UrlResponseErrors.decodeError
