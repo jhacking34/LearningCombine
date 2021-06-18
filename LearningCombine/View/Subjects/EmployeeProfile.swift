@@ -15,7 +15,7 @@ struct EmployeeProfile: View {
             HeaderView(title: "Employee Profile", subTitle: "First Pull Via API", desc: "I am pulling info from BHI API to see how this will work to prepare for the other apps I am making.")
         
             List(vm.employees, id: \.id) { employee in
-                Text("Employee name: \(employee.fname) \(employee.lname) and email addy is: \(employee.email) ")
+                Text("Employee name: \(employee.fname) \(employee.lname) and email addy is: \(employee.email) here is employee number: \(employee.empID)")
             }
             .font(.body)
             Spacer()
