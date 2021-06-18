@@ -32,6 +32,8 @@
 		F6C833322677940800579A58 /* EmployeeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */; };
 		F6CA029C267AD5470045556B /* UrlResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA029B267AD5470045556B /* UrlResponseErrors.swift */; };
 		F6CA029E267B8FDC0045556B /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA029D267B8FDC0045556B /* NetError.swift */; };
+		F6CA02A2267CCB210045556B /* ExampleNetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA02A1267CCB210045556B /* ExampleNetworkCall.swift */; };
+		F6CA02A5267CCEB90045556B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA02A4267CCEB90045556B /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		F6C833312677940800579A58 /* EmployeeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileViewModel.swift; sourceTree = "<group>"; };
 		F6CA029B267AD5470045556B /* UrlResponseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlResponseErrors.swift; sourceTree = "<group>"; };
 		F6CA029D267B8FDC0045556B /* NetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
+		F6CA02A1267CCB210045556B /* ExampleNetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetworkCall.swift; sourceTree = "<group>"; };
+		F6CA02A4267CCEB90045556B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		F621ED80267396D000B08A8C /* LearningCombine */ = {
 			isa = PBXGroup;
 			children = (
+				F6CA02A0267CCB0B0045556B /* Utilities */,
+				F6CA029F267CCAFE0045556B /* DocumentedCode */,
 				F6C8332A2676B47D00579A58 /* Model */,
 				F621ED982674ED9600B08A8C /* ViewModel */,
 				F621ED8F2673977A00B08A8C /* View */,
@@ -170,6 +176,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F6CA029F267CCAFE0045556B /* DocumentedCode */ = {
+			isa = PBXGroup;
+			children = (
+				F6CA02A1267CCB210045556B /* ExampleNetworkCall.swift */,
+			);
+			path = DocumentedCode;
+			sourceTree = "<group>";
+		};
+		F6CA02A0267CCB0B0045556B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6CA02A3267CCE9B0045556B /* Manager */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6CA02A3267CCE9B0045556B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F6CA02A4267CCEB90045556B /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +275,7 @@
 				F621EDA22674F59800B08A8C /* OnChangeViewModel.swift in Sources */,
 				F621ED9E2674F1FD00B08A8C /* ReadWrite.swift in Sources */,
 				F621ED84267396D000B08A8C /* ContentView.swift in Sources */,
+				F6CA02A2267CCB210045556B /* ExampleNetworkCall.swift in Sources */,
 				37B3D0C7267ABC8100149EBB /* ErrorForAlert.swift in Sources */,
 				F621ED9A2674EDB700B08A8C /* IntroViewModel.swift in Sources */,
 				F621ED92267397B100B08A8C /* HeaderView.swift in Sources */,
@@ -261,6 +292,7 @@
 				F6C833302677932800579A58 /* EmployeeProfile.swift in Sources */,
 				F621EDA42675059900B08A8C /* FirstPipelineViewModel.swift in Sources */,
 				F621ED82267396D000B08A8C /* LearningCombineApp.swift in Sources */,
+				F6CA02A5267CCEB90045556B /* NetworkManager.swift in Sources */,
 				F621ED94267399E100B08A8C /* DescView.swift in Sources */,
 				F6C833272676B35F00579A58 /* URLDataTaskPublisher_Intro.swift in Sources */,
 			);
