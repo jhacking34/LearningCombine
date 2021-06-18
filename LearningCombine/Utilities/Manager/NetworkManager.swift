@@ -15,28 +15,28 @@ final class NetworkManager {
     
     private init () {}
     
-    func fetch<T: Decodable>(_ url: URL, defaultValue: T, completed: @escaping (Result<T, UrlResponseErrors>) -> Void){
+    func fetch<T: Decodable>(_ url: URL, defaultValue: T, completed: @escaping (Result<T, NetError>) -> Void){
         let decoder = JSONDecoder()
         
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { (data: Data, response: URLResponse) -> Data in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    throw UrlResponseErrors.unkown
+                    throw NetError.unkown
                 }
                 if (400...499).contains(httpResponse.statusCode){
-                    throw UrlResponseErrors.clientError
+                    throw NetError.clientError
                 }
                 if (500...599).contains(httpResponse.statusCode){
-                    throw UrlResponseErrors.serverError
+                    throw NetError.serverError
                 }
                 return data
             }
             .decode(type: T.self, decoder: decoder)
-            .mapError{ error -> UrlResponseErrors in
-                if let responseError = error as? UrlResponseErrors {
+            .mapError{ error -> NetError in
+                if let responseError = error as? NetError {
                     return responseError
                 } else {
-                    return UrlResponseErrors.decodeError
+                    return NetError.decodeError
                 }
             }
             .sink(receiveCompletion: { IssueCompletion in

@@ -169,9 +169,6 @@
 			children = (
 				F6C8332B2676B49600579A58 /* CatFact.swift */,
 				F6C8332D267791D500579A58 /* Employee.swift */,
-				37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */,
-				F6CA029B267AD5470045556B /* UrlResponseErrors.swift */,
-				F6CA029D267B8FDC0045556B /* NetError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +184,7 @@
 		F6CA02A0267CCB0B0045556B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F6CA02A6267CD26A0045556B /* Error */,
 				F6CA02A3267CCE9B0045556B /* Manager */,
 			);
 			path = Utilities;
@@ -198,6 +196,16 @@
 				F6CA02A4267CCEB90045556B /* NetworkManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		F6CA02A6267CD26A0045556B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */,
+				F6CA029D267B8FDC0045556B /* NetError.swift */,
+				F6CA029B267AD5470045556B /* UrlResponseErrors.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

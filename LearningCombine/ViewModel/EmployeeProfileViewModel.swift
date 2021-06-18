@@ -21,7 +21,16 @@ class EmployeeProfileViewModel : ObservableObject{
                 case .success(let decodedResult):
                     self.employees = decodedResult.resource
                 case .failure(let error):
-                    self.errorForAlert = ErrorForAlert(message: "Details: \(error.rawValue)")
+                    switch error{
+                    case .unkown:
+                        self.errorForAlert = AlertContext.unkown
+                    case .clientError:
+                        self.errorForAlert = AlertContext.clientError
+                    case .serverError:
+                        self.errorForAlert = AlertContext.serverError
+                    case .decodeError:
+                        self.errorForAlert = AlertContext.decodeError
+                    }
                 }
             }
             

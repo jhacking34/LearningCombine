@@ -29,7 +29,7 @@ struct EmployeeProfile: View {
             vm.loadData()
         }
         .alert(item: $vm.errorForAlert) { alert in
-            Alert(title: Text(alert.title), message: Text(alert.message))
+            Alert(title: alert.title, message: alert.message)
         }
     }
 }
