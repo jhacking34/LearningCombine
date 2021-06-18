@@ -31,6 +31,7 @@ class EmployeeProfileViewModel : ObservableObject{
         })
     }
     
+    //move to network shared class
     func fetch<T: Decodable>(_ url: URL, defaultValue: T, completed: @escaping (Result<T, UrlResponseErrors>) -> Void){
         let decoder = JSONDecoder()
         
