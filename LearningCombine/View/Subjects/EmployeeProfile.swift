@@ -20,14 +20,20 @@ struct EmployeeProfile: View {
             .font(.body)
             Spacer()
             
+            Button(action:{
+                vm.loadData()
+            }){
+                Text("Load Data")
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+            }
+            
         }
         .font(.title)
         .background(
             Image("Caineville")
                 .clipped())
-        .onAppear {
-            vm.loadData()
-        }
         .alert(item: $vm.errorForAlert) { alert in
             Alert(title: alert.title, message: alert.message)
         }
