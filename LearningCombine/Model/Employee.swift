@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Employee: Decodable{
+struct Employee: Codable{
     let id : String
     let empID : Int
     let fname : String
@@ -18,7 +18,7 @@ struct Employee: Decodable{
     static let `default` =  Employee(id: "00000", empID: 2, fname: "defualt", lname: "User", email: "d@fault.com", imageURL: "imag")
 }
 
-struct EmployeeResponse: Decodable{
+struct EmployeeResponse: Codable{
     let resource : [Employee]
     
     static let `default` = EmployeeResponse(resource: [Employee.default])

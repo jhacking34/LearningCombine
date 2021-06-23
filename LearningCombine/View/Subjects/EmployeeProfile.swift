@@ -19,15 +19,38 @@ struct EmployeeProfile: View {
             }
             .font(.body)
             Spacer()
-            
-            Button(action:{
-                vm.loadData()
-            }){
-                Text("Load Data")
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
+            HStack{
+                Button(action:{
+                    vm.loadData()
+                }){
+                    Text("Load Data")
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(8)
+                }
+                Button(action:{
+                    let uploadURL = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
+                    let newEmployee = Employee(id: "23e467y", empID: 5, fname: "Chuck", lname: "Norrise", email: "cnorris@bhico.com", imageURL: "nothing")
+                    let newEmployees = EmployeeResponse(resource: [newEmployee])
+                    
+                    vm.upload(newEmployees, to: uploadURL) { (result: Result<EmployeeResponse, UploadError>) in
+                        switch result {
+                        case .success(let success):
+                            print("Got Back \(success)")
+                        case .failure(let failure):
+                            print(failure)
+                            break
+                        }
+                    }
+                    
+                }){
+                    Text("Upload Data")
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(8)
+                }
             }
+            
             
         }
         .font(.title)

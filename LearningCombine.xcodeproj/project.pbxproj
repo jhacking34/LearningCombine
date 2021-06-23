@@ -34,6 +34,7 @@
 		F6CA029E267B8FDC0045556B /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA029D267B8FDC0045556B /* NetError.swift */; };
 		F6CA02A2267CCB210045556B /* ExampleNetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA02A1267CCB210045556B /* ExampleNetworkCall.swift */; };
 		F6CA02A5267CCEB90045556B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA02A4267CCEB90045556B /* NetworkManager.swift */; };
+		F6CA02AA26836B620045556B /* UploadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA02A926836B620045556B /* UploadError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		F6CA029D267B8FDC0045556B /* NetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
 		F6CA02A1267CCB210045556B /* ExampleNetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetworkCall.swift; sourceTree = "<group>"; };
 		F6CA02A4267CCEB90045556B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F6CA02A926836B620045556B /* UploadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				37B3D0C6267ABC8100149EBB /* ErrorForAlert.swift */,
 				F6CA029D267B8FDC0045556B /* NetError.swift */,
 				F6CA029B267AD5470045556B /* UrlResponseErrors.swift */,
+				F6CA02A926836B620045556B /* UploadError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				F621ED84267396D000B08A8C /* ContentView.swift in Sources */,
 				F6CA02A2267CCB210045556B /* ExampleNetworkCall.swift in Sources */,
 				37B3D0C7267ABC8100149EBB /* ErrorForAlert.swift in Sources */,
+				F6CA02AA26836B620045556B /* UploadError.swift in Sources */,
 				F621ED9A2674EDB700B08A8C /* IntroViewModel.swift in Sources */,
 				F621ED92267397B100B08A8C /* HeaderView.swift in Sources */,
 				F621ED9726739BF200B08A8C /* Constraints.swift in Sources */,
