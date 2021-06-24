@@ -29,19 +29,8 @@ struct EmployeeProfile: View {
                         .cornerRadius(8)
                 }
                 Button(action:{
-                    let uploadURL = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
-                    let newEmployee = Employee(id: "238i9", empID: 10, fname: "Jerzee", lname: "Hacking", email: "Jhacking@bhico.com", imageURL: "nothing")
-                    let newEmployees = EmployeeResponse(resource: [newEmployee])
                     
-                    vm.upload(newEmployees, to: uploadURL) { (result: Result<EmployeeResponse, UploadError>) in
-                        switch result {
-                        case .success(let success):
-                            print("Got Back \(success)")
-                        case .failure(let failure):
-                            print("Here what we got: \(failure)")
-                            break
-                        }
-                    }
+                    vm.uploadData()
                     
                 }){
                     Text("Upload Data")

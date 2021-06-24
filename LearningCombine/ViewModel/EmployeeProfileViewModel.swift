@@ -11,7 +11,6 @@ import Combine
 class EmployeeProfileViewModel : ObservableObject{
     @Published var employees: [Employee] = []
     @Published var errorForAlert: ErrorForAlert?
-    @Published private var requests = Set<AnyCancellable>()
     
     func loadData(){
         let url = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
@@ -38,51 +37,26 @@ class EmployeeProfileViewModel : ObservableObject{
         })
     }
     
-    func upload<Input: Encodable, Output: Decodable>(_ data: Input, to url: URL, httpMethod: String = "POST", contentType: String = "application/json", completion: @escaping (Result<Output, UploadError>) -> Void){
+    func uploadData(){
+        let uploadURL = URL(string: "https://api.bhico.com/api/v2/swift/_table/beta?api_key=185fbe051e8c1f312afa7c80aa0f2b4a9506d7a24dec0b9da5e326e85198e714")!
+        let newEmployee = Employee(id: UUID().uuidString, empID: 10, fname: "Johnny", lname: "Hacking", email: "Jhacking@bhico.com", imageURL: "Blank")
+        let newEmployees = EmployeeResponse(resource: [newEmployee])
         
-        var request = URLRequest(url: url)
-        request.httpMethod = httpMethod
-        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
-        let encoder = JSONEncoder()
-        request.httpBody = try? encoder.encode(data)
-        
-//        URLSession.shared.dataTask(with: request) { data, response, error in
-//            DispatchQueue.main.async {
-//                if let data = data {
-//                    do {
-//                        let decoded = try JSONDecoder().decode(Output.self, from: data)
-//                        completion(.success(decoded))
-//                    } catch {
-//                        print(error)
-//                        completion(.failure(.decodedFailed))
-//                    }
-//                } else if error != nil {
-//                    completion(.failure(.uploadFailed))
-//                } else {
-//                    print("Unknown result: no data and no error!")
-//                }
-//            }
-//        }.resume()
-
-        URLSession.shared.dataTaskPublisher(for: request)
-            .map(\.data)
-            .decode(type: Output.self, decoder: JSONDecoder())
-            .map(Result.success)
-            .catch{error -> Just<Result<Output,UploadError>> in
-                if error is DecodingError{
-                    print(error)
-                }else{
-                    print(error)
+        NetworkManager.shared.upload(newEmployees, to: uploadURL) { (result: Result<ResponseDecode,UploadError>) in
+            switch result {
+            case .success(_):
+                self.errorForAlert = AlertContext.sucessful
+            case .failure(let failure):
+                switch failure{
+                case .decodedFailed:
+                    self.errorForAlert = AlertContext.decodeError
+                case .uploadFailed:
+                    self.errorForAlert = AlertContext.serverError
                 }
-                return Just(.failure(.decodedFailed))
-                
-//                ? Just(.failure(.decodedFailed)) // ? means if its true
-//                : Just(.failure(.uploadFailed)) // : means if its false
             }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: completion)
-            .store(in: &requests)
-        
+        }
     }
+    
+    
 }
 

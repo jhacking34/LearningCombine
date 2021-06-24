@@ -49,4 +49,27 @@ final class NetworkManager {
             .store(in: &cancellables)
     }
     
+    func upload<Input: Encodable, Output: Decodable>(_ data: Input, to url: URL, httpMethod: String = "POST", contentType: String = "application/json", completion: @escaping (Result<Output, UploadError>) -> Void){
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod
+        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        let encoder = JSONEncoder()
+        request.httpBody = try? encoder.encode(data)
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .map(\.data)
+            .decode(type: Output.self, decoder: JSONDecoder())
+            .map(Result.success)
+            .catch{error -> Just<Result<Output,UploadError>> in
+                error is DecodingError // This says error == decoding Error
+                ? Just(.failure(.decodedFailed)) // ? means if its true
+                : Just(.failure(.uploadFailed)) // : means if its false
+            }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: completion)
+            .store(in: &cancellables)
+        
+    }
+    
 }

@@ -23,4 +23,6 @@ struct AlertContext {
                                            message: Text("Problem with the server"))
     static let decodeError = ErrorForAlert(title: Text("decodeError"),
                                            message: Text("Problem reading the returned data"))
+    static let sucessful   = ErrorForAlert(title: Text("Sucessful"),
+                                           message: Text("Upload of data was sucessful!"))
 }

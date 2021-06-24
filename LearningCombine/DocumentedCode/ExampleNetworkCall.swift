@@ -115,3 +115,33 @@ import Combine
 //            .store(in: &cancellables)
 //    }
 //}
+
+
+//func upload<Input: Encodable, Output: Decodable>(_ data: Input, to url: URL, httpMethod: String = "POST", contentType: String = "application/json", completion: @escaping (Result<Output, UploadError>) -> Void){
+//
+//    var request = URLRequest(url: url)
+//    request.httpMethod = httpMethod
+//    request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+//    let encoder = JSONEncoder()
+//    request.httpBody = try? encoder.encode(data)
+//
+//    URLSession.shared.dataTaskPublisher(for: request)
+//        .map(\.data)
+//        .decode(type: Output.self, decoder: JSONDecoder())
+//        .map(Result.success)
+
+//              Using this catch operator in the combine pipeline helped me see the error
+//        .catch{error -> Just<Result<Output,UploadError>> in
+//            if error is DecodingError{
+//                print(error)
+//            }else{
+//                print(error)
+//            }
+//            return Just(.failure(.decodedFailed))
+//        }
+//        .receive(on: DispatchQueue.main)
+//        .sink(receiveValue: completion)
+//        .store(in: &requests)
+//
+//}
+
