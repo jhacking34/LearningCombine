@@ -15,6 +15,11 @@ struct Employee: Codable{
     let email : String
     let imageURL : String
     
+//    enum CodingKeys: String, CodingKeys{
+//        case id = "id"
+//        case empID = "empID"
+//    }
+    
     static let `default` =  Employee(id: "00000", empID: 2, fname: "defualt", lname: "User", email: "d@fault.com", imageURL: "imag")
 }
 
@@ -22,4 +27,12 @@ struct EmployeeResponse: Codable{
     let resource : [Employee]
     
     static let `default` = EmployeeResponse(resource: [Employee.default])
+}
+
+struct SucessDecode: Decodable{
+    let resource: [SucessResponse]
+}
+
+struct SucessResponse: Decodable{
+    let id : String
 }
