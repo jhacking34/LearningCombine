@@ -35,12 +35,19 @@ struct EmployeeProfile: View {
                     
                     vm.upload(newEmployees, to: uploadURL) { (result: Result<EmployeeResponse, UploadError>) in
                         switch result {
-                        case .success(let success):
-                            print("Got Back \(success)")
-                        case .failure(let failure):
-                            print(failure)
-                            break
-                        }
+                            case .success(let star):
+                                print("Received back \(star)")
+                            case .failure(let error):
+                                print(error)
+                                break
+                            }
+//                        switch result {
+//                        case .success(let success):
+//                            print("Got Back \(success)")
+//                        case .failure(let failure):
+//                            print("Here what we got: \(failure)")
+//                            break
+//                        }
                     }
                     
                 }){
