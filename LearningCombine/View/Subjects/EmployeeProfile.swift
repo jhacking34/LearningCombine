@@ -33,14 +33,7 @@ struct EmployeeProfile: View {
                     let newEmployee = Employee(id: "238i9", empID: 10, fname: "Jerzee", lname: "Hacking", email: "Jhacking@bhico.com", imageURL: "nothing")
                     let newEmployees = EmployeeResponse(resource: [newEmployee])
                     
-                    vm.upload(newEmployees, to: uploadURL) { (result: Result<SucessDecode, UploadError>) in
-//                        switch result {
-//                            case .success(let star):
-//                            print("Received back \(star)")
-//                            case .failure(let error):
-//                                print(error)
-//                                break
-//                            }
+                    vm.upload(newEmployees, to: uploadURL) { (result: Result<EmployeeResponse, UploadError>) in
                         switch result {
                         case .success(let success):
                             print("Got Back \(success)")

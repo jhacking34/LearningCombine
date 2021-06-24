@@ -69,9 +69,15 @@ class EmployeeProfileViewModel : ObservableObject{
             .decode(type: Output.self, decoder: JSONDecoder())
             .map(Result.success)
             .catch{error -> Just<Result<Output,UploadError>> in
-                error is DecodingError
-                ? Just(.failure(.decodedFailed)) // ? means if its true
-                : Just(.failure(.uploadFailed)) // : means if its false
+                if error is DecodingError{
+                    print(error)
+                }else{
+                    print(error)
+                }
+                return Just(.failure(.decodedFailed))
+                
+//                ? Just(.failure(.decodedFailed)) // ? means if its true
+//                : Just(.failure(.uploadFailed)) // : means if its false
             }
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: completion)
