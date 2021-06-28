@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmployeeProfile: View {
     @StateObject private var vm = EmployeeProfileViewModel()
+    @State private var yourName = "Name"
     
     var body: some View {
         VStack{
@@ -37,6 +38,11 @@ struct EmployeeProfile: View {
             }
             .font(.body)
             Spacer()
+            Picker(selection: $yourName, label: Text("Your Name")) {
+                ForEach(vm.employees, id: \.id){ emp in
+                    Text(emp.fname).tag(emp.fname)
+                }
+            }
             HStack{
                 Button(action:{
                     vm.loadData()
